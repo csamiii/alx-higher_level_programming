@@ -14,7 +14,7 @@ if __name__ == "__main__":
         "Accept": "application/vnd.github+json"
     }
 
-    result = requests.get(url, params={"page": 10})
+    result = requests.get(url, params={"per_page": 10})
     for record in result.json():
         sha = record["sha"]
         username = record["commit"]["author"]["name"]
