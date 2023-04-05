@@ -8,6 +8,6 @@ import sys
 import requests
 
 if __name__ == "__main__":
-    if len(argv) == 2:
+    if len(sys.argv) == 2:
         response = requests.get(sys.argv[1])
         print(response.headers.get('X-Request-Id'))
